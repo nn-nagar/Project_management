@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Project</title>
+
+    <link href="/static/vender/bs/css/bootstrap.min.css" rel="stylesheet"/>
+    {% load static %}
+    <link href="{% static 'style.css' %}" rel="stylesheet"/>
+    <script src="/static/vender/jquery-3.3.1.min.js"></script>
+    <script src="/static/vender/bs/js/bootstrap.min.js"></script>
+    <link href="/static/vender/fa/css/font-awesome.min.css" rel="stylesheet"/>
+
+</head>
+<body>
+<header id="myheader1">
+    <img class="w-100 h-100" src="/static/images/base.jpg"/>
+    <div id="headfix">
+        <nav class="navbar navbar-expand-md navbar-light transparent">
+    <a class="navbar-brand" href="/social/home/">E-Projects</a>
+    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+                <a class="nav-link" href=" ">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="list/">Vendor List</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact/">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+    </div>
+</header>
+</p>
+{% block content %}
+ {%endblock%}
+<footer class="myfooter text-center p-1">
+    <div class="row">
+        <div class="col-sm-6">
+            <h3>Address</h3>
+            <p><h4>B-1102, kitkat road, cadbury area ,Washington DC , pin EK65Z1</h4></p>
+        </div>
+        <div class="col-sm-6">
+            <h2>Projects</h2>
+            <span class="fa fa facebook-official fa-2x"></span>
+        </div>
+    </div>
+    <p>Copyright @ E-Project</p>
+</footer>
+</body>
+</html>

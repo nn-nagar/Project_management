@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>E-Project</title>
+</head>
+<body>
+<h1><a href="/">Home</a></h1>
+<p></p>
+
+<h2>Vendor Detail</h2>
+
+<div class="p-5">
+    <h1 class="myhead2">{{vendor.vender_name}}</h1>
+    <hr>
+    <div class="row">
+    <div class="col-sm-6">
+        <h3><p><strong>Vendor ::</strong>{{vendor.vendor_name}}</p></h3>
+        <p><strong>Project ::</strong>{{vendor.project}}</p>
+        <p><strong>Budget ::</strong> ${{vendor.project.project_budget}}</p>
+        <p><strong>Branch ::</strong>{{vendor.branch}}</p>
+        <p><strong>City ::</strong>{{vendor.branch.branch_city_name}}</p>
+    </div>
+    <div class="col-sm-6">
+    </div>
+
+<div class="col-sm-8">
+    <button><a class="btn btn-dark ml-3 my-3" href="/list/">Back</a></button>
+</div>
+        </div>
+    </div>
+</body>
+</html>

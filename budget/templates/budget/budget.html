@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>E-Project</title>
+</head>
+<body>
+<h1><a href="/">Home</a></h1>
+<p></p>
+<h2>Vendor Detail</h2>
+{% for vendor in vendors %}
+<div class="p-5">
+    <hr>
+
+    <div class="row">
+    <div class="col-sm-6">
+        <p><strong>Vendor ::</strong> {{vendor.vendor_name}}</p>
+        <p><strong>Project ::</strong> {{vendor.project}}</p>
+        <p><strong>Budget ::</strong> ${{vendor.project.project_budget}}</p>
+        <p><strong>Branch ::</strong> {{vendor.branch}}</p>
+        <p><strong>City ::</strong> {{vendor.branch.branch_city_name}}</p>
+    </div>
+    <div class="col-sm-6">
+    </div>
+
+
+        </div>
+
+    </div>
+ {% endfor %}
+<div class="col-sm-8">
+    <h2><p><strong>Total Budget ::</strong> ${{ total_budget }}</p></h2>
+    <button><a class="btn btn-dark ml-3 my-3" href="/list/">Back</a></button>
+<!--    <button><a class="btn btn-dark ml-3 my-3" href="/list/">Total Budget</a></button>-->
+</div>
+</body>
+</html>

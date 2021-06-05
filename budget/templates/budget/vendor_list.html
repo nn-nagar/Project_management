@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>E-Project</title>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+<h1><a href="/">Home</a></h1>
+
+<p></p>
+
+<h2>Vendors List</h2>
+
+<table>
+  <tr>
+    <th>Vendor Name</th>
+     <th>Vendor's Projects</th>
+      <th>Project</th>
+    <th>Project Budget</th>
+    <th>Branch</th>
+      <th>City</th>
+  </tr>
+    {% for object in object_list %}
+  <tr>
+
+      <td><a href="/vendor/{{object.id}}">{{ object.vendor_name }}</a></td>
+    <td><a href="/vendor/{{object.id}}/budget/">{{ object.vendor_name }} - {{ object.project }} </a> details</td>
+    <td>{{ object.project }}</td>
+    <td>{{ object.project.project_budget }}</td>
+      <td>{{ object.branch }}</td>
+      <td>{{ object.branch.branch_city_name }}</td>
+
+  </tr>
+     {% endfor %}
+</table>
+
+</body>
+</html>
+
+
+
+
+<!---->
+<!--<ul>-->
+<!--    &lt;!&ndash; Iterate over object_list &ndash;&gt;-->
+<!--    {% for object in object_list %}-->
+<!--    &lt;!&ndash; Display Objects &ndash;&gt;-->
+<!--    <li>{{ object.vendor_name }}</li>-->
+<!--    <li>{{ object.project }}</li>-->
+<!--    <li>{{ object.project.project_budget }}</li>-->
+<!--    <li>{{ object.branch }}</li>-->
+<!--    <li>{{ object.branch.branch_city_name }}</li>-->
+
+
+<!--    <hr/>-->
+<!--    &lt;!&ndash; If objet_list is empty  &ndash;&gt;-->
+<!--    {% empty %}-->
+<!--    <li>No objects yet.</li>-->
+<!--    {% endfor %}-->
+<!--</ul>-->
